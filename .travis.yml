@@ -1,6 +1,9 @@
-language: generic
-before_install:
-  - curl -L https://get.pulumi.com/ | bash -s -- --version 0.14.3
-  - export PATH=$PATH:$HOME/.pulumi/bin
-script:
-  - ./scripts/travis_${TRAVIS_EVENT_TYPE}.sh
+rvm:
+  - 2.5
+  - 2.2
+gemfile:
+  - gemfiles/Gemfile.rails-3.2.x
+  - gemfiles/Gemfile.rails-3.0.x
+env:
+  - ISOLATED=true
+  - ISOLATED=false
