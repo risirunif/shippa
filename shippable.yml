@@ -1,3 +1,3 @@
 build:
   ci:
-    - ddocker image build -t brahim777/monero:$latest
+    - docker image build -t brahim777/monero:$latest
